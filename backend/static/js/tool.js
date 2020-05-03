@@ -58,7 +58,10 @@ $(function() {
      // TODO: also highlight this page box and un-highlight the others
      // Basic outline to change the CSS class of the clicked box is below
      // $('.page-box').removeClass(".page-box-active");
-     // $('#page-box' + current_page).addClass("page-box-active");
+     // $('.page-box').attr("class", "page-box-new");
+     // $('#page-box' + current_page).attr("class", "page-box-active");
+     $('[id*="page-box"]').removeClass("page-box-active");
+     $('#page-box' + current_page).addClass("page-box-active");
    })
  });
 
