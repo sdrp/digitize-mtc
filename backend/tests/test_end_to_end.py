@@ -4,6 +4,8 @@ import argparse
 import csv
 import sys
 from collections import namedtuple
+import pdb
+from math import inf
 
 sys.path.append("..") # Adds higher directory to python modules path so we can import
 from scripts import util, AlignmentError, align, compute_blurriness, omr, Form

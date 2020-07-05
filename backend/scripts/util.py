@@ -16,6 +16,7 @@ import math
 import time
 from skimage.filters import threshold_local
 from app import get_output_folder, get_debug_write_id, save_debug
+import pdb
 
 # CONSTANTS
 BLACK_LEVEL = 0.6 * 255
@@ -186,10 +187,13 @@ def write_form_to_csv(form, form_name):
     aligned_images[0].save(pdf_path, save_all=True, append_images=aligned_images[1:])
 
     path_to_csv = str(get_output_folder() + "/" + form_name + ".csv")
+
+    # Write header if file did not already exist
+    file_exists = os.path.isfile(path_to_csv)
+
     with open(path_to_csv, "a+") as csv_file:
         writer = csv.writer(csv_file)
-        # Write header if file did not already exist
-        if not os.path.isfile(path_to_csv):
+        if not file_exists:
             questions = [question.name for question in all_questions]
             questions.append("All_Forms_Pdf")
             header_line = [questions]
