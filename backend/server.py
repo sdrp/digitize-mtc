@@ -223,10 +223,10 @@ def check_alignment(form_name, page_number):
 				vs.stop()
 				return jsonify(encoded_form)
 
-	except AlignmentError:
+	except AlignmentError as err:
 		reset_globals()
 		# Uncomment the line below for live alignment debug in console
-		print("Alignment Error!")
+		print(err.msg)
 		return json_status("unaligned")
 
 def upload_all_templates():
