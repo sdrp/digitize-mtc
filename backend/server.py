@@ -110,7 +110,7 @@ def get_image_from_request(request, page_number=0):
 
 	Returns:
 		[(String, numpy.ndarray)]: the location of the saved file on disk and a \
-			numpy array containing the image 
+			numpy array containing the image
 	"""
 	file = request.files.getlist("file")[page_number]
 	# 1) Construct a name/path for the file
@@ -147,6 +147,14 @@ def write_debug_stream_image(form_name, page_number, image):
 
 	cv2.imwrite(file_name, image)
 
+def get_template_and_template_image(form_name, page_number):
+    template = templates[form_name]["pages"][int(page_number)]
+    template_image = template.image
+    if isinstance(template_image, str):
+        template_image = util.read_image(str(get_homedir() / template_image))
+
+    assert template_image is not None
+    return template, template_image
 
 @app.route('/check_alignment/<form_name>/<page_number>', methods=['GET', 'POST'])
 def check_alignment(form_name, page_number):
@@ -162,12 +170,7 @@ def check_alignment(form_name, page_number):
 	if (vs.stopped):
 		vs.start()
 
-	template = templates[form_name]["pages"][int(page_number)]
-	template_image = template.image
-	if isinstance(template_image, str):
-		template_image = util.read_image(template_image)
-
-	assert template_image is not None
+	template, template_image = get_template_and_template_image(form_name, page_number)
 
 	if request.method == "GET":
 		# Grab a frame from the live camera feed
@@ -229,6 +232,14 @@ def check_alignment(form_name, page_number):
 		print("Alignment Error!")
 		return json_status("unaligned")
 
+def get_homedir():
+    path = Path.cwd()
+    last_dir = None
+    while last_dir != "digitize-mtc" and last_dir != '/':
+        path, last_dir = os.path.split(path)
+    assert last_dir == 'digitize-mtc'
+    return Path(path + "/digitize-mtc/")
+
 def upload_all_templates():
 	# Populate the "templates" and "template_images" Python dictionaries with
 	# modeled Python "Form" objects
@@ -236,7 +247,7 @@ def upload_all_templates():
 
 	# TODO: loop through all files *.json from forms/json_annotations
 	for file in ["delivery", "antenatal", "covid", "admission"]:
-		path_to_json_file = str(Path.cwd() / "backend" / "forms" / "json_annotations" / (file + ".json"))
+		path_to_json_file = str(get_homedir() / "backend" / "forms" / "json_annotations" / (file + ".json"))
 		templates[file] = read_multipage_json_to_form(path_to_json_file)
 
 # Set up global variables
