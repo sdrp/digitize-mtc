@@ -46,7 +46,6 @@ def checkbox_state(input_image, template_image, response_region):
         checkbox_state = CheckboxState.empty
     else:
         checkbox_state = CheckboxState.unknown
-        print("Ambiguous checkbox state for %s\nScore: %.4f" % (response_region.name, scr))
     response_region.value = checkbox_state
     return checkbox_state
 
@@ -86,7 +85,6 @@ def radio_answer(question, input_image, template_image):
         question.answer_status = AnswerStatus.resolved
     else:
         # No one box is clearly more filled than the others - set all to unknown
-        print(highest_score - second_highest_score)
         for rr in question.response_regions:
             rr.value = CheckboxState.unknown
         question.answer_status = AnswerStatus.unresolved

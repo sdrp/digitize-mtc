@@ -12,6 +12,8 @@ from scripts import util, AlignmentError, align, compute_blurriness, omr, Form
 from server import templates, upload_all_templates, get_template_and_template_image
 
 # TODO: confusion matrix
+# [comment] Sud: Confusion matrix only really works for checkboxes...for radio correct / incorrect makes the most sense for now
+# For radios, missing / missing case is correct; any combination of missing + an actual value is wrong
 EvaluationResults = namedtuple('EvaluationResults', ['checkbox_correct', 'checkbox_incorrect', 'radio_correct', 'radio_incorrect'])
 
 def get_results_directory(results_file):
@@ -76,8 +78,8 @@ def process_result_dir(form_name, result_dir, form_pages, results_map):
 
         for name, predicted_answer in radio_results.items():
             real_answer = actual_results[name]
-            radio_correct += real_answer == predicted_answer
-            radio_incorrect += real_answer != predicted_answer
+            radio_correct += (real_answer == predicted_answer)
+            radio_incorrect += (real_answer != predicted_answer)
 
         for name, predicted_answer in checkbox_results.items():
             predicted_answer = str(predicted_answer)

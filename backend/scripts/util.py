@@ -236,12 +236,22 @@ def extract_checkbox_answer(q):
     Returns:
         answer (str): the answer embedded in the response region value
     '''
-    if q.response_regions[0].value == CheckboxState.checked.name:
-        answer = True
-    elif q.response_regions[0].value == CheckboxState.empty.name:
-        answer = False
+
+    # TODO: remove need for "CheckboxState(1).name", which is necessary because the 
+    # JSON coming back from the frontend contains strings rather than modeled CheckboxState objects
+    # The function also needs to be able to extract checkbox answers whether or not the 
+    # the values are modeled. 
+
+    checkbox_value = q.response_regions[0].value
+    if checkbox_value == CheckboxState(1) or checkbox_value == CheckboxState(1).name:
+        answer = True # "checked"
+    elif checkbox_value == CheckboxState(0) or checkbox_value == CheckboxState(0).name:
+        answer = False # "empty"
+    elif checkbox_value == CheckboxState(-1) or checkbox_value == CheckboxState(-1).name:
+        answer = None # "unknown"
     else:
-        answer = None # q.response_regions[0].value must be CheckboxState.unknown.name
+        print("Error in extracting checkbox answer. Invalid value: %s" % checkbox_value)
+        answer = None
     return answer
 
 def extract_radio_answer(q):
