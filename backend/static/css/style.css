@@ -27,6 +27,7 @@
 	rect.checked { fill: green; }
 	rect.empty { fill: red; }
 	rect.unknown { fill: orange; }
+	rect.missing { fill: paleturquoise}
 	rect.filled {
 		fill-opacity: 0.25;
 		fill: transparent;

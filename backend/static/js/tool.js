@@ -258,22 +258,37 @@ function clicked(d) {
 	var question_group = findByName(form[current_page].question_groups, question_group_name);
 	var question = findByName(question_group.questions, question_name);
 
+	if (d3.event.shiftKey) {
+        console.log("Mouse+Shift pressed");
+    }
+
 	if (active.node() === parentNode) {
 		// If the active node is clicked, change the underlying response
 		if (question_type_string == "radio") {
+			// Find the response region
 			var response_region = findByName(question.response_regions, response_region_name);
-			// Set all of the responses to "empty", then check the one that was clicked
+			// Set all of the responses to "empty" or "missing", based on if shift was held down
+			var new_state = (d3.event.shiftKey) ? "missing" : "empty";
 			for (var i = 0; i < question.response_regions.length; i++) {
-				question.response_regions[i].value = "empty";
+				question.response_regions[i].value = new_state;
 			}
-			response_region.value = "checked";
+			// Now set this specific box to "checked" if shift was NOT held down
+			if (!d3.event.shiftKey) {
+				response_region.value = "checked";
+			}
+			
 			display(form[current_page]);
 			visualize(form[current_page]);
 
 		} else if (question_type_string == "checkbox") {
 			var response_region = question.response_regions[0];
-			// Flip the response region value on click
-			response_region.value = (response_region.value == "checked") ? "empty" : "checked";
+			if (d3.event.shiftKey) {
+				// Making this a "missing" value
+				response_region.value = "missing";
+			} else {
+				// Flip the response region value 
+				response_region.value = (response_region.value == "checked") ? "empty" : "checked";
+			}
 			display(form[current_page]);
 			visualize(form[current_page]);
 		}
@@ -400,7 +415,8 @@ function visualize(form) {
 	.append("rect")
 	.merge(responses)
 	.attr("class", function(d) {
-		if ((d.value == "checked") || (d.value == "empty") || (d.value == "unknown")) {
+		if ((d.value == "checked") || (d.value == "empty") || 
+			(d.value == "unknown") || (d.value == "missing")) {
 			return "response " +  d.value;
 		} else if (d.value != "") {
 			return "response filled";
