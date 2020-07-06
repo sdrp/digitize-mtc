@@ -7,14 +7,14 @@
         "h": 1056.0,
         "question_groups": [
             {
-                "name": "PhysicalExam",
+                "name": "Physical Exam",
                 "w": 403.05966,
                 "h": 470.7424,
                 "x": 411.64496,
                 "y": 586.93433,
                 "questions": [
                     {
-                        "name": "HEENTFindings",
+                        "name": "HEENT Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -32,7 +32,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "NeckFindings",
+                        "name": "Neck Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -50,7 +50,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "PulmonaryFindings",
+                        "name": "Pulmonary Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -68,7 +68,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "CardiovascularFindings",
+                        "name": "Cardiovascular Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -86,7 +86,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "AbdominalFindings",
+                        "name": "Abdominal Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -104,7 +104,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "UrogenitalFindings",
+                        "name": "Urogenital Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -122,7 +122,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "RectalFindings",
+                        "name": "Rectal Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -140,7 +140,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "MusculoskeletalFindings",
+                        "name": "Musculoskeletal Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -158,7 +158,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "LymphNodeFindings",
+                        "name": "LymphNode Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -176,7 +176,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "SkinAndMucosaFindings",
+                        "name": "SkinAndMucosa Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -194,7 +194,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "NeurologicalFindings",
+                        "name": "Neurological Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -2793,7 +2793,7 @@
         "h": 1056.0,
         "question_groups": [
             {
-                "name": "Specimen",
+                "name": "Specimens",
                 "w": 8.5187635,
                 "h": 0.0,
                 "x": 807.48126,
@@ -3613,7 +3613,7 @@
                 "__type__": "QuestionGroup"
             },
             {
-                "name": "OtherTesting",
+                "name": "Other Testing",
                 "w": 6.752861,
                 "h": 274.99817,
                 "x": 812.71344,
@@ -4142,7 +4142,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "OtherFindings",
+                        "name": "Other Findings",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -4181,7 +4181,7 @@
                 "__type__": "QuestionGroup"
             },
             {
-                "name": "Diagnosis",
+                "name": "Diagnosis & Plan",
                 "w": 6.752861,
                 "h": 632.93958,
                 "x": 809.24713,
