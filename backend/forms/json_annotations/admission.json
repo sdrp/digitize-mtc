@@ -2793,14 +2793,14 @@
         "h": 1056.0,
         "question_groups": [
             {
-                "name": "Specimen1",
-                "w": 8.8514624,
-                "h": 8.9229221,
+                "name": "Specimen",
+                "w": 8.5187635,
+                "h": 0.0,
                 "x": 807.48126,
-                "y": 138.79204,
+                "y": 276.75415,
                 "questions": [
                     {
-                        "name": "Date",
+                        "name": "Date1",
                         "question_type": "text",
                         "response_regions": [
                             {
@@ -2818,7 +2818,43 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "NasalSwab",
+                        "name": "Date2",
+                        "question_type": "text",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 121.76625,
+                                "h": 31.645468,
+                                "x": 80.145584,
+                                "y": 162.35501,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "Date3",
+                        "question_type": "text",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 121.76625,
+                                "h": 31.645468,
+                                "x": 81.521477,
+                                "y": 228.39772,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "NasalSwab1",
                         "question_type": "checkbox",
                         "response_regions": [
                             {
@@ -2836,7 +2872,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "OropharyngealSwab",
+                        "name": "OropharyngealSwab1",
                         "question_type": "checkbox",
                         "response_regions": [
                             {
@@ -2854,7 +2890,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "VenousBlood",
+                        "name": "VenousBlood1",
                         "question_type": "checkbox",
                         "response_regions": [
                             {
@@ -2872,7 +2908,7 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "FingerPrick",
+                        "name": "FingerPrick1",
                         "question_type": "checkbox",
                         "response_regions": [
                             {
@@ -2881,6 +2917,150 @@
                                 "h": 11.874393,
                                 "x": 246.48631,
                                 "y": 131.33093,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "NasalSwab2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.50461,
+                                "y": 153.12276,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "OropharyngealSwab2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.30095,
+                                "y": 167.58273,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "VenousBlood2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.30095,
+                                "y": 181.43175,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "FingerPrick2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.50461,
+                                "y": 195.07709,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "NasalSwab3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.50461,
+                                "y": 218.29456,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "OropharyngealSwab3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.50459,
+                                "y": 232.55089,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "VenousBlood3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.30095,
+                                "y": 246.19624,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "FingerPrick3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 247.30095,
+                                "y": 259.63791,
                                 "value": null,
                                 "__type__": "ResponseRegion"
                             }
@@ -2935,6 +3115,330 @@
                                 "h": 11.874393,
                                 "x": 397.23032,
                                 "y": 133.30586,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntibodyTest2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41702,
+                                "y": 158.2272,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntigenTest2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41702,
+                                "y": 179.58836,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "RTPCRTest2",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41702,
+                                "y": 196.99374,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntibodyTest3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41702,
+                                "y": 222.70624,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntigenTest3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41702,
+                                "y": 244.0674,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "RTPCRTest3",
+                        "question_type": "checkbox",
+                        "response_regions": [
+                            {
+                                "name": "",
+                                "w": 12.516252,
+                                "h": 11.874393,
+                                "x": 398.41705,
+                                "y": 261.86835,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntibodyTestResult1",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "IgMAndIgG",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 602.1333,
+                                "y": 100.9096,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Invalid",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 546.45746,
+                                "y": 101.14061,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Negative",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 546.16504,
+                                "y": 87.634964,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "PositiveIgG",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 667.974,
+                                "y": 87.972473,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "PositiveIgM",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 601.90222,
+                                "y": 87.741447,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntigenTestResult2",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "Invalid",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 679.75604,
+                                "y": 180.38051,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Negative",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 551.53986,
+                                "y": 180.38051,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Positive",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 618.07367,
+                                "y": 180.14949,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntigenTestResult3",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "Invalid",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 679.75604,
+                                "y": 245.29715,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Negative",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 551.30884,
+                                "y": 245.06613,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Positive",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 618.30469,
+                                "y": 245.52817,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "AntibodyTestResult2",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "IgMAndIgG",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 603.28839,
+                                "y": 164.44012,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Invalid",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 547.61255,
+                                "y": 164.20909,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Negative",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 547.61255,
+                                "y": 151.27197,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "PositiveIgG",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 669.36011,
+                                "y": 151.04095,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "PositiveIgM",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 603.28839,
+                                "y": 151.27197,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "RTPCRTestResult3",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "Invalid",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 679.52502,
+                                "y": 262.85468,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Negative",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 551.07782,
+                                "y": 263.08569,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Positive",
+                                "w": 9.9750147,
+                                "h": 9.7952089,
+                                "x": 618.07367,
+                                "y": 262.85468,
                                 "value": null,
                                 "__type__": "ResponseRegion"
                             }
@@ -3016,268 +3520,6 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "AntibodyTestResult1",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "IgMAndIgG",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 602.1333,
-                                "y": 100.9096,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Invalid",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 546.45746,
-                                "y": 101.14061,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Negative",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 546.16504,
-                                "y": 87.634964,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "PositiveIgG",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 667.974,
-                                "y": 87.972473,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "PositiveIgM",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 601.90222,
-                                "y": 87.741447,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    }
-                ],
-                "__type__": "QuestionGroup"
-            },
-            {
-                "name": "Specimen2",
-                "w": 6.8631687,
-                "h": 146.79512,
-                "x": 809.11182,
-                "y": 65.586494,
-                "questions": [
-                    {
-                        "name": "Date",
-                        "question_type": "text",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 121.76625,
-                                "h": 31.645468,
-                                "x": 80.145584,
-                                "y": 162.35501,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "NasalSwab",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.50461,
-                                "y": 153.12276,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "OropharyngealSwab",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.30095,
-                                "y": 167.58273,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "VenousBlood",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.30095,
-                                "y": 181.43175,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "FingerPrick",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.50461,
-                                "y": 195.07709,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntibodyTest2",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41702,
-                                "y": 158.2272,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntigenTest2",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41702,
-                                "y": 179.58836,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "RTPCRTest2",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41702,
-                                "y": 196.99374,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntibodyTestResult2",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "IgMAndIgG",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 603.28839,
-                                "y": 164.44012,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Invalid",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 547.61255,
-                                "y": 164.20909,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Negative",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 547.61255,
-                                "y": 151.27197,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "PositiveIgG",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 669.36011,
-                                "y": 151.04095,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "PositiveIgM",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 603.28839,
-                                "y": 151.27197,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
                         "name": "RTPCRTestResult2",
                         "question_type": "radio",
                         "response_regions": [
@@ -3305,232 +3547,6 @@
                                 "h": 9.7952089,
                                 "x": 617.84265,
                                 "y": 197.70702,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntigenTestResult2",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "Invalid",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 679.75604,
-                                "y": 180.38051,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Negative",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 551.53986,
-                                "y": 180.38051,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Positive",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 618.07367,
-                                "y": 180.14949,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    }
-                ],
-                "__type__": "QuestionGroup"
-            },
-            {
-                "name": "Specimen3",
-                "w": 5.9881787,
-                "h": 212.41815,
-                "x": 813.96021,
-                "y": 62.121304,
-                "questions": [
-                    {
-                        "name": "Date",
-                        "question_type": "text",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 121.76625,
-                                "h": 31.645468,
-                                "x": 81.521477,
-                                "y": 228.39772,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "NasalSwab",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.50461,
-                                "y": 218.29456,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "OropharyngealSwab",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.50459,
-                                "y": 232.55089,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "VenousBlood",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.30095,
-                                "y": 246.19624,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "FingerPrick",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 247.30095,
-                                "y": 259.63791,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntibodyTest3",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41702,
-                                "y": 222.70624,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntigenTest3",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41702,
-                                "y": 244.0674,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "RTPCRTest3",
-                        "question_type": "checkbox",
-                        "response_regions": [
-                            {
-                                "name": "",
-                                "w": 12.516252,
-                                "h": 11.874393,
-                                "x": 398.41705,
-                                "y": 261.86835,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "RTPCRTestResult3",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "Invalid",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 679.52502,
-                                "y": 262.85468,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Negative",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 551.07782,
-                                "y": 263.08569,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Positive",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 618.07367,
-                                "y": 262.85468,
                                 "value": null,
                                 "__type__": "ResponseRegion"
                             }
@@ -3585,42 +3601,6 @@
                                 "h": 9.7952089,
                                 "x": 603.05737,
                                 "y": 215.72658,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
-                        "name": "AntigenTestResult3",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "Invalid",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 679.75604,
-                                "y": 245.29715,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Negative",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 551.30884,
-                                "y": 245.06613,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Positive",
-                                "w": 9.9750147,
-                                "h": 9.7952089,
-                                "x": 618.30469,
-                                "y": 245.52817,
                                 "value": null,
                                 "__type__": "ResponseRegion"
                             }
@@ -4298,42 +4278,6 @@
                         "__type__": "Question"
                     },
                     {
-                        "name": "COVID19",
-                        "question_type": "radio",
-                        "response_regions": [
-                            {
-                                "name": "Confirmed",
-                                "w": 17.509754,
-                                "h": 15.964776,
-                                "x": 141.10802,
-                                "y": 655.0708,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "No",
-                                "w": 17.509754,
-                                "h": 15.964776,
-                                "x": 307.78995,
-                                "y": 656.17401,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            },
-                            {
-                                "name": "Suspected",
-                                "w": 17.509754,
-                                "h": 15.964776,
-                                "x": 223.82581,
-                                "y": 656.17401,
-                                "value": null,
-                                "__type__": "ResponseRegion"
-                            }
-                        ],
-                        "answer_status": "unresolved",
-                        "expected_number_digits": 0,
-                        "__type__": "Question"
-                    },
-                    {
                         "name": "Disposition",
                         "question_type": "radio",
                         "response_regions": [
@@ -4388,6 +4332,42 @@
                                 "h": 15.964776,
                                 "x": 457.24612,
                                 "y": 712.42999,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            }
+                        ],
+                        "answer_status": "unresolved",
+                        "expected_number_digits": 0,
+                        "__type__": "Question"
+                    },
+                    {
+                        "name": "COVID19",
+                        "question_type": "radio",
+                        "response_regions": [
+                            {
+                                "name": "Confirmed",
+                                "w": 17.509754,
+                                "h": 15.964776,
+                                "x": 141.10802,
+                                "y": 655.0708,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "No",
+                                "w": 17.509754,
+                                "h": 15.964776,
+                                "x": 307.78995,
+                                "y": 656.17401,
+                                "value": null,
+                                "__type__": "ResponseRegion"
+                            },
+                            {
+                                "name": "Suspected",
+                                "w": 17.509754,
+                                "h": 15.964776,
+                                "x": 223.82581,
+                                "y": 656.17401,
                                 "value": null,
                                 "__type__": "ResponseRegion"
                             }
