@@ -238,8 +238,10 @@ def extract_checkbox_answer(q):
     '''
     if q.response_regions[0].value == CheckboxState.checked.name:
         answer = True
-    else:
+    elif q.response_regions[0].value == CheckboxState.empty.name:
         answer = False
+    else:
+        answer = None # q.response_regions[0].value must be CheckboxState.unknown.name
     return answer
 
 def extract_radio_answer(q):
@@ -251,7 +253,7 @@ def extract_radio_answer(q):
     '''
     # TODO: remove rr.value == CheckboxState.checked.name
     out = list(filter(lambda rr: rr.value == CheckboxState.checked or rr.value == CheckboxState.checked.name, q.response_regions))
-    # if the checkbox is not filled in return an empty string
+    # No checkbox was checked, return an empty string
     return out[0].name if out else ""
 
 def aligned_static_path(aligned_filename):

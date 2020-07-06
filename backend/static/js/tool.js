@@ -268,6 +268,10 @@ function clicked(d) {
 			// Find the response region
 			var response_region = findByName(question.response_regions, response_region_name);
 			// Set all of the responses to "empty" or "missing", based on if shift was held down
+			// "missing" means that the record does not contain a mark in ANY of the radio squares,
+			// meaning that there is no information to be extracted. This will be represented as a 
+			// different color in the frontend, to indicate that there is no information rather than
+			// the OMR not being able to make a guess. 
 			var new_state = (d3.event.shiftKey) ? "missing" : "empty";
 			for (var i = 0; i < question.response_regions.length; i++) {
 				question.response_regions[i].value = new_state;
@@ -282,13 +286,13 @@ function clicked(d) {
 
 		} else if (question_type_string == "checkbox") {
 			var response_region = question.response_regions[0];
-			if (d3.event.shiftKey) {
-				// Making this a "missing" value
-				response_region.value = "missing";
-			} else {
-				// Flip the response region value 
-				response_region.value = (response_region.value == "checked") ? "empty" : "checked";
-			}
+
+			// Flip the response region value
+			// NOTE: There is no "missing" option here, because there is no way to 
+			// distinguish between the case where the checkbox was no filled out vs.
+			// the case where the checkbox was intentially left blank
+			response_region.value = (response_region.value == "checked") ? "empty" : "checked";
+
 			display(form[current_page]);
 			visualize(form[current_page]);
 		}
