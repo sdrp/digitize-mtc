@@ -1,5 +1,5 @@
 # Digitiz
-an OMR tool that automates data extraction from paper records
+an OMR tool that automates data extraction from paper medical records
 
 
 Dependencies
@@ -26,8 +26,31 @@ Getting Started
 Start the server using the following line:
 
 ```
-python backend/server.py
+python3 backend/server.py
 ```
+
+Running Tests
+=============
+To run a test suite, first navigate to `backend/tests` and run the `test_end_to_end.py` script 
+on the desired test set. For example, to run PIH Admission test set execute the following commands
+from the repository root:
+
+```
+cd backend/tests/
+python3 test_end_to_end.py --INPUT_FILE test_sets/pih/admission.csv
+```
+
+Generating New Tests
+====================
+To generate new test cases from each scanned record run the server in debug mode, making sure to 
+specify your desired camera and output directory. For example:
+```
+python3 backend/server.py --save-debug --camera_index 1 --upload_folder [upload_folder]
+```
+...where `[upload_folder]` is the absolute path to the directory into which the server should 
+write all new test files. 
+
+
 
 Find Out More
 =============

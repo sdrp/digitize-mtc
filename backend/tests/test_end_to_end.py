@@ -18,13 +18,15 @@ EvaluationResults = namedtuple('EvaluationResults', ['checkbox_correct', 'checkb
 
 def get_results_directory(results_file):
     results_dirs = []
-    with open(results_file) as csv_file:
+    result_file_abs_dir = os.getcwd() + "/" + results_file
+    with open(result_file_abs_dir) as csv_file:
         reader = csv.reader(csv_file, delimiter=',')
         reader_iter = iter(reader)
         first_row = next(reader_iter)
         assert first_row[-1] == "All_Forms_Pdf"
         for row in reader_iter:
-            results_dirs.append("/".join(row[-1].split("/")[0:-1]))
+            abs_dir = os.getcwd() + "/".join(row[-1].split("/")[0:-1])
+            results_dirs.append(abs_dir)
     return results_dirs
 
 # TODO: separate out the ranking logic of when to accept an image in server.py
@@ -91,7 +93,8 @@ def process_result_dir(form_name, result_dir, form_pages, results_map):
 
 def map_results_file(results_file):
     results_map = {}
-    with open(results_file) as csv_file:
+    results_file_abs_dir = os.getcwd() + "/" + results_file
+    with open(results_file_abs_dir) as csv_file:
         reader = csv.reader(csv_file, delimiter=',')
         reader_iter = iter(reader)
         first_row = next(reader_iter)
@@ -100,7 +103,8 @@ def map_results_file(results_file):
             directory_map = {}
             for i in range(len(row) - 1):
                 directory_map[first_row[i]] = row[i]
-            results_map["/".join(row[-1].split("/")[0:-1])] = directory_map
+            abs_dir = os.getcwd() + "/".join(row[-1].split("/")[0:-1])
+            results_map[abs_dir] = directory_map
 
     return results_map
 
