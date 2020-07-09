@@ -4,15 +4,22 @@ from enum import Enum
 ### Form Template Model ###
 ###########################
 
+class ID():
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+
 # TODO: rename FormContainer to Form and Form to Page
-class FormContainer():
-    def __init__(self, forms):
-        self.forms = forms
-        # TODO separate name
-        self.name = forms[0].name
-
-
 class Form():
+    def __init__(self, pages, id = ID("test", "test")):
+        self.pages = pages
+        # TODO separate name
+        self.name = self.pages[0].name # TODO: fix this
+        self.id = id # ID object
+
+
+class Page():
     def __init__(self, name, image, width, height, question_groups):
         self.name = name # name of data table
         self.image = image # path to image of form

@@ -8,7 +8,7 @@ import pdb
 from math import inf
 
 sys.path.append("..") # Adds higher directory to python modules path so we can import
-from scripts import util, AlignmentError, align, compute_blurriness, omr, Form
+from scripts import util, AlignmentError, align, compute_blurriness, omr, Form, Page
 from server import templates, upload_all_templates, get_template_and_template_image
 
 # TODO: confusion matrix
@@ -65,8 +65,8 @@ def process_result_dir(form_name, result_dir, form_pages, results_map):
 
         # not used
         aligned_filename = None
-        processed_form = Form(template.name, aligned_filename, template.w, template.h, answered_questions)
-        questions = [q for group in processed_form.question_groups for q in group.questions]
+        processed_page = Page(template.name, aligned_filename, template.w, template.h, answered_questions)
+        questions = [q for group in processed_page.question_groups for q in group.questions]
         filtered_questions = [q for q in questions if q.question_type == "radio" or q.question_type == "checkbox"]
         radio_results = {}
         checkbox_results = {}

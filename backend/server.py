@@ -167,13 +167,13 @@ def check_alignment(form_name, page_number):
 	# Wait before processing frame, based on camera's frame rate
 	# Ex. wait for 100 frames to go by before sampling one
 	time.sleep(vs.frame_delay * 10)
-	if (vs.stopped):
-		vs.start()
 
 	template, template_image = get_template_and_template_image(form_name, page_number)
 
 	if request.method == "GET":
 		# Grab a frame from the live camera feed
+		if (vs.stopped):
+			vs.start()
 		assert vs.stream_quality_preserved(), "Video input quality dropped. Please check camera and restart the server."
 		frame = vs.read()
 	else:
@@ -214,17 +214,17 @@ def check_alignment(form_name, page_number):
 				answered_questions, clean_input = omr.recognize_answers(locally_aligned_image, template_image, template)
 				# Write output
 				aligned_filename = util.write_aligned_image("original_frame.jpg", locally_aligned_image)
-				# Create Form object with result, and JSONify to be sent to front end
-				processed_form = Form(template.name, aligned_filename, template.w, template.h, answered_questions)
+				# Create Page object with result, and JSONify to be sent to front end
+				processed_page = Page(template.name, aligned_filename, template.w, template.h, answered_questions)
 				encoder = FormTemplateEncoder()
-				encoded_form = encoder.default(processed_form)
-				encoded_form['status'] = "success"
+				encoded_page = encoder.default(processed_page)
+				encoded_page['status'] = "success"
 				end = time.time()
 				print("\n\n\n It took %.2f to run the process script." % (end - start))
 				# Reset the global counters
 				reset_globals()
 				vs.stop()
-				return jsonify(encoded_form)
+				return jsonify(encoded_page)
 
 	except AlignmentError as err:
 		reset_globals()

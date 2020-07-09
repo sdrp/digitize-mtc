@@ -16,6 +16,10 @@ class FormTemplateEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, Form):
             dict_repr = self.get_basic_dict(obj)
+            # Figure out special cases here?
+            return dict_repr
+        elif isinstance(obj, Page):
+            dict_repr = self.get_basic_dict(obj)
             dict_repr["question_groups"] = [self.default(q) for q in obj.question_groups]
             return dict_repr
         elif isinstance(obj, QuestionGroup):
@@ -49,12 +53,15 @@ def decode_form(form_json):
         li = []
         for elem in form_json:
             decoded_elem = decode_form(elem)
-            assert isinstance(decoded_elem, Form)
+            assert isinstance(decoded_elem, Page)
             li.append(decoded_elem)
-        return FormContainer(li)
+        return Form(li)
     if '__type__' in form_json and form_json['__type__'] == Form.__name__:
+        pages = [decode_form(page) for page in form_json["pages"]]
+        return Form(pages)
+    if '__type__' in form_json and form_json['__type__'] == Page.__name__:
         question_groups = [decode_form(question) for question in form_json["question_groups"]]
-        return Form(form_json['name'], form_json['image'], form_json['w'], form_json['h'], question_groups)
+        return Page(form_json['name'], form_json['image'], form_json['w'], form_json['h'], question_groups)
     if '__type__' in form_json and form_json['__type__'] == QuestionGroup.__name__:
         questions = [decode_form(question) for question in form_json["questions"]]
         return QuestionGroup(form_json['name'], form_json["w"], form_json["h"], form_json["x"], form_json["y"], questions)

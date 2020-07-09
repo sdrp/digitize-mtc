@@ -2784,7 +2784,7 @@
                 "__type__": "QuestionGroup"
             }
         ],
-        "__type__": "Form"
+        "__type__": "Page"
     },
     {
         "name": "Admission Page 2",
@@ -4380,7 +4380,7 @@
                 "__type__": "QuestionGroup"
             }
         ],
-        "__type__": "Form"
+        "__type__": "Page"
     }
   ]
 }

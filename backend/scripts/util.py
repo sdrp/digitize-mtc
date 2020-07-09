@@ -164,22 +164,22 @@ def write_form_to_csv(form, form_name):
     """
 
     # TODO: move all Forms -> Page and Form and Form to Page
-    if isinstance(form, FormContainer):
-        forms = form.forms
+    if isinstance(form, Form):
+        pages = form.pages
     else:
-        forms = [form]
+        raise Exception("Invalid data structure for CSV writer.")
 
     # Get list of answer values, which will form a new row of the CSV
     all_questions = []
-    for f in forms:
-        all_questions += [q for group in f.question_groups for q in group.questions]
+    for p in pages:
+        all_questions += [q for group in p.question_groups for q in group.questions]
 
     # Alphabetize questions by name
     all_questions.sort(key=lambda q: q.name)
     answers = [extract_answer(q) for q in all_questions]
 
     # save aligned images as one pdf file
-    aligned_images = [Image.open(aligned_static_path(f.image)) for f in forms]
+    aligned_images = [Image.open(aligned_static_path(p.image)) for p in pages]
     if save_debug():
         pdf_path = str(get_output_folder() + "/" + form_name + "_" + str(get_debug_write_id()) + "/aligned_images.pdf")
     else:
