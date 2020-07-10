@@ -70,9 +70,15 @@
 
 
   <div class="page-queue" float="left">
-    <p>Page</p>
     <form id="upload-file" method="post" float="left" enctype="multipart/form-data" >
+      <!-- ID button -->
+      <p>{{ id_name }}</p>
+      <div>
+        <input type="text" id="id-input">
+      </div>
 
+      <!-- Page upload buttons -->
+      <p>Pages</p>
       {% for i in range(0, num_pages) %}
       <div id="page-box{{ i }}" class="page-box page-box-new">
         <div class="page-ph-add">

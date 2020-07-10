@@ -15,6 +15,9 @@ function requestLiveFeedResponse(form_name, page_number) {
       if (stop_align) {
         return // stop checking for an alignment
       } else if (data.status == 'success') {
+      	if (data.id_value != "") {
+        	$("#id-input").val(data.id_value);
+      	}
         form[page_number] = data;
         d3.select("#scanning-status-box").style('background-color', 'green');
         $('#file-thumbnail' + page_number).attr('src', "/static/image/checkmark.png");
@@ -542,7 +545,7 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: '/save/' + file_path,
-			data: JSON.stringify(form),
+			data: JSON.stringify(form), // Need to send back the identifier as well
 			contentType: false,
 			cache: false,
 			processData: false,
@@ -592,6 +595,9 @@ function check_alignment(input, page_number) {
     processData: false,
     success: function(data) {
       if (data.status == 'success') {
+      	if (data.id_value != "") {
+        	$("#id-input").val(data.id_value);
+      	}
         form[page_number] = data;
         $('#page-box' + page_number).attr("class", "page-box-green");
       } else {

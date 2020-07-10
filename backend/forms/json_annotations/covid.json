@@ -1,5 +1,10 @@
 {
   "name": "COVID",
+  "id": 
+    {
+        "name": "Identification Number",
+        "value": ""
+    }, 
   "pages": [{
       "name": "COVID",
       "image": "backend/forms/template_images_v2/Case_Report_Form.jpeg",

@@ -23,8 +23,9 @@ def home():
 def upload(form):
 	template = templates[form]
 	name = template["name"]
+	id_name = template["id_name"]
 	num_pages = len(template["pages"])
-	return render_template('upload.html', name=name, num_pages=num_pages, file_path=form)
+	return render_template('upload.html', name=name, id_name=id_name, num_pages=num_pages, file_path=form)
 
 @app.route('/save/<file>', methods=['POST'])
 def save_response(file):
@@ -219,6 +220,7 @@ def check_alignment(form_name, page_number):
 				encoder = FormTemplateEncoder()
 				encoded_page = encoder.default(processed_page)
 				encoded_page['status'] = "success"
+				encoded_page['id_value'] = "test identifier" # run barcode detection and add output here
 				end = time.time()
 				print("\n\n\n It took %.2f to run the process script." % (end - start))
 				# Reset the global counters
