@@ -1,4 +1,9 @@
 { "name": "Delivery",
+    "id": 
+    {
+        "name": "Registration Number",
+        "value": ""
+    }, 
   "pages": [
     {
       "name": "Delivery Page 1",

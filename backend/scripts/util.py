@@ -98,6 +98,7 @@ def read_multipage_json_to_form(path_to_json_file):
         loaded_json = json.load(json_template)
         template_form = {}
         name = loaded_json["name"]
+        id_name = loaded_json["id"]["name"]
         pages = []
         images = []
         for page in loaded_json["pages"]:
@@ -107,6 +108,7 @@ def read_multipage_json_to_form(path_to_json_file):
             images.append(template_image)
         template_form["name"] = name
         template_form["pages"] = pages
+        template_form["id_name"] = id_name
         template_form["images"] = images
     return template_form
 
