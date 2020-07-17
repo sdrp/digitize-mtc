@@ -49,6 +49,7 @@ class FormTemplateEncoder(json.JSONEncoder):
 
 # Decoder that converts JSON back to FormTemplate object (should be inverse of above)
 def decode_form(form_json):
+    # form_json is a list of Page objects at first call 
     if isinstance(form_json, list):
         li = []
         for elem in form_json:
