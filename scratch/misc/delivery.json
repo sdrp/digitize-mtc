@@ -8,10 +8,10 @@
       "question_groups": [
           {
               "name": "Registration Info",
-              "w": 12.29028,
-              "h": 12.29028,
-              "x": 791.29028,
-              "y": 398.29553,
+              "x": 26.875286,
+              "y": 134.37643,
+              "w": 734.93573,
+              "h": 94.063507,
               "questions": [
                   {
                       "name": "Registration Number",
@@ -90,93 +90,103 @@
                       ],
                       "answer_status": "unresolved",
                       "__type__": "Question"
+                  }
+              ],
+              "__type__": "QuestionGroup"
+          },
+          {
+              "name": "Admission To Labor Ward",
+              "x": 26.875286,
+              "y": 228.43994,
+              "w": 733.90204,
+              "h": 170.5547,
+              "questions": [
+                  {
+                      "name": "Temperature",
+                      "question_type": "text",
+                      "response_regions": [
+                          {
+                              "name": "",
+                              "x": 176.23987,
+                              "y": 304.93115,
+                              "w": 74.423874,
+                              "h": 16.538637,
+                              "value": null,
+                              "__type__": "ResponseRegion"
+                          }
+                      ],
+                      "answer_status": "unresolved",
+                      "__type__": "Question"
                   },
                   {
-                    "name": "Temperature",
-                    "question_type": "text",
-                    "response_regions": [
-                        {
-                            "name": "",
-                            "x": 176.23987,
-                            "y": 304.93115,
-                            "w": 74.423874,
-                            "h": 16.538637,
-                            "value": null,
-                            "__type__": "ResponseRegion"
-                        }
-                    ],
-                    "answer_status": "unresolved",
-                    "__type__": "Question"
+                      "name": "Pulse",
+                      "question_type": "text",
+                      "response_regions": [
+                          {
+                              "name": "",
+                              "x": 304.41431,
+                              "y": 305.96481,
+                              "w": 49.615913,
+                              "h": 16.021805,
+                              "value": null,
+                              "__type__": "ResponseRegion"
+                          }
+                      ],
+                      "answer_status": "unresolved",
+                      "__type__": "Question"
                   },
                   {
-                    "name": "Pulse",
-                    "question_type": "text",
-                    "response_regions": [
-                        {
-                            "name": "",
-                            "x": 304.41431,
-                            "y": 305.96481,
-                            "w": 49.615913,
-                            "h": 16.021805,
-                            "value": null,
-                            "__type__": "ResponseRegion"
-                        }
-                    ],
-                    "answer_status": "unresolved",
-                    "__type__": "Question"
+                      "name": "Blood Pressure",
+                      "question_type": "text",
+                      "response_regions": [
+                          {
+                              "name": "",
+                              "x": 400.54514,
+                              "y": 305.96481,
+                              "w": 54.784237,
+                              "h": 16.538637,
+                              "value": null,
+                              "__type__": "ResponseRegion"
+                          }
+                      ],
+                      "answer_status": "unresolved",
+                      "__type__": "Question"
                   },
                   {
-                    "name": "Blood Pressure",
-                    "question_type": "text",
-                    "response_regions": [
-                        {
-                            "name": "",
-                            "x": 400.54514,
-                            "y": 305.96481,
-                            "w": 54.784237,
-                            "h": 16.538637,
-                            "value": null,
-                            "__type__": "ResponseRegion"
-                        }
-                    ],
-                    "answer_status": "unresolved",
-                    "__type__": "Question"
-                  },
-                  {
-                    "name": "Membranes Ruptured",
-                    "question_type": "radio",
-                    "response_regions": [
-                        {
-                            "name": "no",
-                            "x": 206.21614,
-                            "y": 285.80835,
-                            "w": 14.988141,
-                            "h": 14.988141,
-                            "value": null,
-                            "__type__": "ResponseRegion"
-                        },
-                        {
-                            "name": "yes",
-                            "x": 250.1469,
-                            "y": 285.2915,
-                            "w": 14.988141,
-                            "h": 14.471309,
-                            "value": null,
-                            "__type__": "ResponseRegion"
-                        }
-                    ],
-                    "answer_status": "unresolved",
-                    "__type__": "Question"
+                      "name": "Membranes Ruptured",
+                      "question_type": "radio",
+                      "response_regions": [
+                          {
+                              "name": "no",
+                              "x": 206.21614,
+                              "y": 285.80835,
+                              "w": 14.988141,
+                              "h": 14.988141,
+                              "value": null,
+                              "__type__": "ResponseRegion"
+                          },
+                          {
+                              "name": "yes",
+                              "x": 250.1469,
+                              "y": 285.2915,
+                              "w": 14.988141,
+                              "h": 14.471309,
+                              "value": null,
+                              "__type__": "ResponseRegion"
+                          }
+                      ],
+                      "answer_status": "unresolved",
+                      "__type__": "Question"
                   }
               ],
               "__type__": "QuestionGroup"
           },
           {
               "name": "Obstetric Risks",
-              "w": 11.29028,
-              "h": 398.29553,
-              "x": 790.19006,
-              "y": 253.36154,
+              "x": 26.875286,
+              "y": 398.99463,
+              "w": 733.90204,
+              "h": 257.38257,
               "questions": [
                   {
                       "name": "High Blood Pressure",
@@ -774,10 +784,10 @@
           },
           {
               "name": "Baby Identification",
-              "w": 11.29028,
-              "h": 652.6571,
-              "x": 791.59998,
-              "y": 465.90295,
+              "x": 353.5134,
+              "y": 659.47821,
+              "w": 401.06198,
+              "h": 332.84009,
               "questions": [
                   {
                       "name": "Date Of Birth",
