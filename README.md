@@ -59,28 +59,6 @@ Under the hood, step 3 is:
 - **Review** — everything the tool could not resolve on its own is surfaced in the web UI
   for the clinician to fill in, rather than silently guessed at.
 
-## What it can do today
-
-This is an honest snapshot of the current implementation, which is more limited than the
-vision described on the project website.
-
-| Field type | Status |
-|---|---|
-| Checkboxes | ✅ Detected automatically |
-| Radio buttons / multiple choice | ✅ Detected automatically |
-| Handwritten digits | ⚠️ Region located and cropped, but flagged for manual entry |
-| Free text | ⚠️ Region located and cropped, but flagged for manual entry |
-
-An MNIST digit classifier (`backend/scripts/model.onnx`, with segmentation in
-`digit_segmentation.py`) was built and evaluated, but the inference path in
-`backend/scripts/mnist.py` is **currently commented out**, so `digits` questions fall
-through to the same manual-entry path as free text. Handwriting recognition with
-best-in-class open source models is the main focus of the next major revision — see
-[Roadmap](#roadmap).
-
-Four form templates ship with the repo: `antenatal`, `delivery`, `admission`, and
-`covid` (`backend/forms/json_annotations/`).
-
 ## Getting started
 
 Requires **Python 3**.
@@ -111,6 +89,9 @@ It opens a browser at `http://localhost:8000` automatically.
 | `--save-debug` | off | Write diagnostic images and JSON for every capture |
 
 ## Adding your own forms
+
+Four form templates ship with the repo: `antenatal`, `delivery`, `admission`, and
+`covid` (`backend/forms/json_annotations/`).
 
 A form template is a JSON file in `backend/forms/json_annotations/` paired with a clean
 scan of the blank form in `backend/forms/template_images_v2/`. The JSON describes a
@@ -157,18 +138,6 @@ docs/                  Project website (GitHub Pages)
 scratch/               Prototypes and abandoned experiments — not part of the app
 ```
 
-## Roadmap
-
-The project is being revived, with the following priorities:
-
-- **Camera interface** — device enumeration and selection so the tool works with a
-  built-in webcam or any plugged-in USB camera, instead of a hardcoded index.
-- **Frame streaming** — replace the MJPEG-over-`multipart` loop with a lower-latency
-  path to the frontend.
-- **Handwriting and mark recognition** — replace the disabled MNIST model with modern
-  best-in-class open source OCR/HTR for handwritten fields and more robust checkbox
-  detection.
-
 ## Publication
 
 Perera S, Maung C, Hla S, Moo Moo H, Than Lwin S, Bruck C, et al.
@@ -193,6 +162,14 @@ funding amidst the ongoing migrant and refugee crisis in the region.
 | **Sophia Hla** | Deputy Director of Medical Services | Mae Tao Clinic |
 | **Hsa Moo Moo** | Health Information System Manager | Mae Tao Clinic |
 | **Neil Sarkar** | President and CEO | Rhode Island Quality Institute |
+
+## License
+
+The application code in this repository is released under the [MIT License](LICENSE).
+
+Note that `docs/` contains the project website, built on a third-party Bootstrap theme
+whose own license (`docs/license.txt`) restricts commercial use of the *theme*. That
+restriction applies to the website template only, not to the digitization software.
 
 ## Acknowledgements
 
