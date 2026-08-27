@@ -1045,14 +1045,31 @@ button:focus {
 /* ==========================================================================
    team section
    ========================================================================== */
+#team > .container {
+  max-width: 1480px; }
+
+#team .team-grid {
+  justify-content: center; }
+
+#team .team-grid [class*="col-"] {
+  display: flex;
+  margin-bottom: 30px; }
+
 #team .single-team {
   border: 1px solid #ddd;
   position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
   -moz-transition: all .8s ease;
   -webkit-transition: all .8s ease;
   transition: all .8s ease; }
   #team .single-team img {
-    width: 100%; }
+    width: 100%;
+    aspect-ratio: 262 / 309;
+    object-fit: cover;
+    object-position: center 15%; }
   #team .single-team .team-social-icons {
     position: absolute;
     left: 0;
@@ -1091,16 +1108,37 @@ button:focus {
     -webkit-transition: all .8s ease;
     transition: all .8s ease; }
   #team .single-team .team-details {
-    padding: 45px 0px 30px 0px;
-    position: relative; }
+    padding: 25px 10px 25px 10px;
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #team .single-team .team-details .team-inner {
+      width: 100%; }
     #team .single-team .team-details h5.team-title {
       font-size: 16px;
       font-weight: 600;
       display: block;
-      margin-bottom: 0; }
+      line-height: 22px;
+      margin-bottom: 6px;
+      white-space: nowrap; }
     #team .single-team .team-details p {
       font-size: 12px;
       color: #5e629c; }
+    #team .single-team .team-details p.team-role {
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 18px;
+      color: #186b47;
+      margin-bottom: 3px;
+      white-space: nowrap; }
+    #team .single-team .team-details p.team-affil {
+      font-size: 12px;
+      line-height: 18px;
+      color: #3d4166;
+      margin-bottom: 0;
+      white-space: nowrap; }
 
 /* ==========================================================================
    Blog section
